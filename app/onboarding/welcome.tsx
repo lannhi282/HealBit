@@ -27,7 +27,7 @@ export default function WelcomeScreen() {
       <View style={styles.bottomArea}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => router.push("/onboarding")}
+          onPress={() => router.push("/onboarding")} // Điều hướng đến app/onboarding/index.tsx
           activeOpacity={0.85}
         >
           <Text style={styles.buttonText}>Get Started</Text>
@@ -42,25 +42,32 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#ffffff",
   },
+  logo: {
+    fontFamily: "BalsamiqSans_700Bold",
+    fontSize: 36,
+  },
+  tagline: {
+    fontFamily: "BalsamiqSans_400Regular",
+    marginTop: 8,
+    fontSize: 15,
+    color: "#6b7280",
+  },
+  buttonText: {
+    fontFamily: "BalsamiqSans_700Bold",
+    color: "#fff",
+    fontSize: 16,
+  },
   centerContent: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-  logo: {
-    fontSize: 36,
-    fontWeight: "700",
-  },
+
   logoHeal: {
     color: "#1a1a1a",
   },
   logoBit: {
     color: "#4CAF50",
-  },
-  tagline: {
-    marginTop: 8,
-    fontSize: 15,
-    color: "#6b7280",
   },
   bottomArea: {
     paddingHorizontal: 24,
@@ -71,10 +78,5 @@ const styles = StyleSheet.create({
     paddingVertical: 18,
     borderRadius: 50,
     alignItems: "center",
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "600",
   },
 });
